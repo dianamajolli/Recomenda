@@ -68,8 +68,8 @@ const NavBar = () => {
           <Link to="/">
             <img
               className="h-12 object-cover"
-              alt="Logo color updated"
-              src="logo.png"
+              
+              src="./images/logoRecomenda.png"
             />
           </Link>
           <button
