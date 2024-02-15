@@ -38,17 +38,17 @@ const NavBar = () => {
       <div className="hidden md:flex justify-between items-center p-1 mr-5 ml-1">
         <div className="z-10 hidden md:flex gap-16 [font-family:'Inria_Serif',Helvetica] font-bold [color:#342f19] text-lg ">
           <Link to="/" className="hover:[color:#7d5844]">
-            Login
+            
           </Link>
           <Link to="/Dashboard" className="hover:[color:#7d5844]">
-            Dashboard
+            
           </Link>
 
           <Link to="/myaccount"></Link>
         </div>
       </div>
 
-      <div className="flex justify-between ">
+      {/* <div className="flex justify-between ">
         <Link to="/">
           <img
             className="fixed w-[85px] h-[64px] top-0 left-0 "
@@ -60,7 +60,7 @@ const NavBar = () => {
           onClick={toggleMenu}
           className="md:hidden text-gray-800 "
         ></button>
-      </div>
+      </div> */}
     </div>
   );
 };

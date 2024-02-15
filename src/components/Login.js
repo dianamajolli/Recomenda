@@ -45,91 +45,82 @@ const Login = () => {
       }
     };
   
-    /*const facebookSignIn = () => {
-      try {
-        signInWithRedirect(auth, facebookProvider);
-      } catch (error) {
-        console.error("Facebook sign-in error:", error);
-        setNotification("Facebook sign-in failed. Please try again.");
-        dispatch(loginFailure());
-      }
-    };*/
-  
+     
     return (
-      <div className="login-container">
-        <div className="login-box">
-          <h2 className="login-title">
-                LOG IN            
-          </h2>
-          <form className="login-form" onSubmit={loginUser}>
-            <input
-              type="text"
-              placeholder="Username or email address *"
-              className="login-input"
-              value={loginData.email}
-              onChange={(e) =>
-                setLoginData({ ...loginData, email: e.target.value })
-              }
-            />
-            <input
-              type="password"
-              placeholder="Password *"
-              className="login-input"
-              value={loginData.password}
-              onChange={(e) =>
-                setLoginData({ ...loginData, password: e.target.value })
-              }
-            />
-            <div className="remember-me">
-              <input type="checkbox" id="rememberMe"/>
-              <span>Remember Me </span>
-            </div>
-            <div className="flex justify-center">
-              <button
-                type="submit"
-                className="login-button"
-              >
-                LOG IN
-              </button>
-            </div>
-            <div className="login-links">
-              <p className="login-links">
-                <a href="/signup" className="underline">
-                  Don’t have an account?
-                </a>
-              </p>
-              <p className="login-links">
-                <a href="/forgotpassword" className="underline">
-                  Forgot password?
-                </a>
-              </p>
-            </div>
-            <div className="login-or">
-              OR
-            </div>
-            <div>
-              <button
-                type="button"
-                className="google-button"
-                value="Sign In"
-                onClick={googleSignIn}
-              >
-                <img
-                  
-                  alt="Google Logo"
-                  src="./images/Google.svg"
-                />
-                LOG IN WITH GOOGLE
-              </button>
-            </div>
+        <><div>
             
-          </form>
-        </div>
-        <Notification
-          message={notification}
-          onClose={() => setNotification("")}
-        />
-      </div>
+          <img
+            className="logoRecomenda "
+            alt="logoRecomenda"
+            src="./images/logoRecomenda.png"
+          />
+            <p> Your Human Resources Management System </p>
+        </div><div className="login-container">
+                <div className="login-box">
+                    <h2 className="login-title">
+                        LOG IN
+                    </h2>
+                    <form className="login-form" onSubmit={loginUser}>
+                        <input
+                            type="text"
+                            placeholder="Username or email address *"
+                            className="login-input"
+                            value={loginData.email}
+                            onChange={(e) => setLoginData({ ...loginData, email: e.target.value })} />
+                        <input
+                            type="password"
+                            placeholder="Password *"
+                            className="login-input"
+                            value={loginData.password}
+                            onChange={(e) => setLoginData({ ...loginData, password: e.target.value })} />
+                        <div className="remember-me">
+                            <input type="checkbox" id="rememberMe" />
+                            <span>Remember Me </span>
+                        </div>
+                        <div className="flex justify-center">
+                            <button
+                                type="submit"
+                                className="login-button"
+                            >
+                                LOG IN
+                            </button>
+                        </div>
+                        <div className="login-links">
+                            <p className="login-links">
+                                <a href="/signup" className="underline">
+                                    Don’t have an account?
+                                </a>
+                            </p>
+                            <p className="login-links">
+                                <a href="/forgotpassword" className="underline">
+                                    Forgot password?
+                                </a>
+                            </p>
+                        </div>
+                        <div className="login-or">
+                            OR
+                        </div>
+                        <div>
+                            <button
+                                type="button"
+                                className="google-button"
+                                value="Sign In"
+                                onClick={googleSignIn}
+                            >
+                                <img
+
+                                    alt="Google Logo"
+                                    src="./images/Google.svg" />
+                                LOG IN WITH GOOGLE
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+                <Notification
+                    message={notification}
+                    onClose={() => setNotification("")} />
+            </div></>
     );
   };
   

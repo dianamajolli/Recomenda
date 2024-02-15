@@ -14,6 +14,7 @@
     max-width: 400px; /* Adjust width as needed */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    margin-top: -20rem;
   }
   
   .login-title {
@@ -47,7 +48,7 @@
   }
   
   .login-button {
-    background-color: #c0876a;
+    background-color: #7724a7;
     color: white;
     padding: 0.5rem;
     border: none;
@@ -64,7 +65,7 @@
   }
   
   .login-links a {
-    color: #c0876a;
+    color: #7724a7;
     text-decoration: none;
   }
   
@@ -94,6 +95,11 @@
   .google-button img {
     margin-right: 0.5rem;
     height: 2rem;
+  }
+
+  .logoRecomenda { 
+    width: 20%;
+    height: 10rem;
   }
   
   /* Ensure you add responsiveness as needed */
