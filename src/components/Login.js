@@ -1,42 +1,10 @@
-/* import React, { useState } from 'react';
-import axios from 'axios';
-
-
-function Login() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  
-   const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const { data } = await axios.post('/api/login', { username, password });
-      // Handle successful login here (e.g., storing the token, redirecting to dashboard)
-      console.log(data); // Placeholder
-    } catch (error) {
-      console.error("Login failed", error);
-    }
-  }; 
-
-  return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
-      <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      <button type="submit">Login</button>
-    </form>
-      
-
-  );
-}
-
-export default Login; */
-
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-//import { FaFacebook } from "react-icons/fa6";
 import Notification from "./Notification";
 //import { auth } from '../firebase';
 import './Login.css';
+
 
 
 
@@ -147,28 +115,14 @@ const Login = () => {
                 onClick={googleSignIn}
               >
                 <img
-                  className="google-button"
+                  
                   alt="Google Logo"
                   src="./images/Google.svg"
                 />
                 LOG IN WITH GOOGLE
               </button>
             </div>
-            <div>
-              <button
-                type="button"
-                className=" flex justify-center w-full bg-[#ffffff] text-[#767676] rounded border py-2 mt-4"
-                value="Sign In"
-                //onClick={facebookSignIn}
-              >
-                <div
-                  size={30}
-                  color="blue"
-                  style={{ marginRight: "15px", marginLeft: "20px" }}
-                />
-                LOG IN WITH FACEBOOK
-              </button>
-            </div>
+            
           </form>
         </div>
         <Notification

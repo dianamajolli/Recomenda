@@ -72,22 +72,28 @@
     text-align: center;
     margin: 1rem 0;
     font-family: 'Arial', sans-serif;
+    margin-top: -0.8rem;
   }
   
   .google-button {
     background-color: #ffffff;
     color: #767676;
-    padding: 0.5rem;
+    padding: -1.5rem;
     border: 1px solid #ddd;
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    width: 100%;
+    
+    
+    
   }
   
   .google-button img {
     margin-right: 0.5rem;
+    height: 2rem;
   }
   
   /* Ensure you add responsiveness as needed */
