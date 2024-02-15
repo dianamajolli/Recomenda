@@ -1,17 +1,31 @@
+import { Provider } from 'react-redux';
 import React from 'react';
-//import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Login from './pages/Login';
-import Dashboard from './pages/Dashboard';
+import LoginPage from './pages/LoginPage';
+import Dashboard from './pages/DashboardPage';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import store from './store';
 
 function App() {
+  
   return (
-    <Router>
-      <Switch>
-        <Route path="/login" component={Login} />
-        <Route path="/dashboard" component={Dashboard} />
-        <Route path="/" exact component={Login} />
-      </Switch>
-    </Router>
+    <>
+      
+        <Provider store={store}>
+          <Router>
+            <Routes>
+              <Route path="/LoginPage" element={LoginPage} />
+              <Route path="/dashboard" component={Dashboard} />
+              <Route path="/" element={<LoginPage/>} />
+              
+              
+
+             
+            </Routes>
+          </Router>
+        </Provider>
+      
+      
+    </>
   );
 }
 
