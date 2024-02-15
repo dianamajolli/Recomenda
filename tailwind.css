@@ -1,0 +1,12 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --secondary-text: rgba(49, 57, 87, 1);
+}
