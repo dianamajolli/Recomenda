@@ -1,0 +1,94 @@
+/* In your Login.css file */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9; /* Adjust the background color as needed */
+  }
+  
+  .login-box {
+    background-color: white;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px; /* Adjust width as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .login-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-family: 'Arial Black', sans-serif;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-input {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .remember-me input {
+    margin-right: 0.5rem;
+  }
+  
+  .login-button {
+    background-color: #c0876a;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .login-links {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .login-links a {
+    color: #c0876a;
+    text-decoration: none;
+  }
+  
+  .login-or {
+    text-align: center;
+    margin: 1rem 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .google-button {
+    background-color: #ffffff;
+    color: #767676;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .google-button img {
+    margin-right: 0.5rem;
+  }
+  
+  /* Ensure you add responsiveness as needed */
+  

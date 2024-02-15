@@ -36,10 +36,11 @@ import { useNavigate } from "react-router-dom";
 //import { FaFacebook } from "react-icons/fa6";
 import Notification from "./Notification";
 //import { auth } from '../firebase';
+import './Login.css';
 
 
 
-const LogIn = () => {
+const Login = () => {
     const [loginData, setLoginData] = useState({
       email: "",
       password: "",
@@ -87,16 +88,16 @@ const LogIn = () => {
     };*/
   
     return (
-      <div className="flex flex-col items-center w-full px-4 md:px-20 py-10 ">
-        <div className="w-full max-w-md bg-[#f7f6f2] rounded border shadow-md p-6">
-          <h2 className="text-2xl font-medium text-[#767676] mb-4 text-center">
-            LOG IN
+      <div className="login-container">
+        <div className="login-box">
+          <h2 className="login-title">
+                LOG IN            
           </h2>
-          <form className="space-y-4" onSubmit={loginUser}>
+          <form className="login-form" onSubmit={loginUser}>
             <input
               type="text"
-              placeholder="Email"
-              className="w-full p-2 border rounded"
+              placeholder="Username or email address *"
+              className="login-input"
               value={loginData.email}
               onChange={(e) =>
                 setLoginData({ ...loginData, email: e.target.value })
@@ -104,49 +105,49 @@ const LogIn = () => {
             />
             <input
               type="password"
-              placeholder="Password"
-              className="w-full p-2 border rounded"
+              placeholder="Password *"
+              className="login-input"
               value={loginData.password}
               onChange={(e) =>
                 setLoginData({ ...loginData, password: e.target.value })
               }
             />
-            <div className="flex items-center gap-2 text-[#767676]">
-              <input type="checkbox" />
+            <div className="remember-me">
+              <input type="checkbox" id="rememberMe"/>
               <span>Remember Me </span>
             </div>
             <div className="flex justify-center">
               <button
                 type="submit"
-                className="w-full bg-[#c0876a] text-white rounded py-2 mt-4"
+                className="login-button"
               >
                 LOG IN
               </button>
             </div>
-            <div className="flex justify-between">
-              <p className="text-[#c0876a] text-[13px]">
+            <div className="login-links">
+              <p className="login-links">
                 <a href="/signup" className="underline">
                   Don’t have an account?
                 </a>
               </p>
-              <p className="text-[#c0876a] text-[13px]">
+              <p className="login-links">
                 <a href="/forgotpassword" className="underline">
                   Forgot password?
                 </a>
               </p>
             </div>
-            <div className="flex justify-center">
-              <p className="text-[#c0876a] text-[13px]">OR</p>
+            <div className="login-or">
+              OR
             </div>
             <div>
               <button
                 type="button"
-                className=" flex justify-center w-full bg-[#ffffff] text-[#767676] rounded border py-2 mt-4"
+                className="google-button"
                 value="Sign In"
                 onClick={googleSignIn}
               >
                 <img
-                  className="relative mr-4"
+                  className="google-button"
                   alt="Google Logo"
                   src="./images/Google.svg"
                 />
@@ -178,5 +179,5 @@ const LogIn = () => {
     );
   };
   
-  export default LogIn;
+  export default Login;
   
