@@ -50,6 +50,10 @@ const HomePage: React.FC = () => {
     				Remote Work Analysis
 				</Link>
 
+                <Link to="/Performance" className="text-left w-full text-xl p-8 font-semibold hover:text-brown-800" style={{ fontFamily: 'Arial, sans-serif', color: '#FFFFFF', marginTop: '-35px' }}>
+    				Performance Metrics
+				</Link>
+
                
 
                 <div className="bg-slate-50 p-8 my-0 mx-12 min-w-[920px] max-w-[1028px] rounded-2xl max-h-[28rem]">
