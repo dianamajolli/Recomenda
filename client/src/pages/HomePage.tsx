@@ -43,14 +43,41 @@ const HomePage: React.FC = () => {
                     </h1>
 
                                 
+                    <div className="links-row" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', gap: '16px', paddingLeft: '8px', flexWrap: 'nowrap' }}>
+                        <Link to="/Performance" className="text-left text-xl font-semibold hover:text-brown-800" style={{ 
+                                fontFamily: 'Arial, sans-serif', 
+                                color: '#FFFFFF', 
+                                whiteSpace: 'nowrap', 
+                                padding: '8px',
+                                fontSize: '1.2rem',
+                                maxWidth: '100%' }}>
+                            Performance Metrics
+                        </Link>
 
-                    <Link to="/Performance" className="text-left w-full text-xl p-8 font-semibold hover:text-brown-800" style={{ fontFamily: 'Arial, sans-serif', color: '#FFFFFF', marginTop: '-35px' }}>
-                        Performance Metrics
-                    </Link>
+                        <Link to="/RemoteWork" className="text-left text-xl font-semibold hover:text-brown-800" style={{ 
+                                fontFamily: 'Arial, sans-serif', 
+                                color: '#FFFFFF', 
+                                whiteSpace: 'nowrap', 
+                                padding: '8px',
+                                fontSize: '1.2rem',
+                                maxWidth: '100%'  }}>
+                            Remote Work Analysis
+                        </Link>
 
-                    <Link to="/RemoteWork" className="text-left w-full text-xl p-8 font-semibold hover:text-brown-800" style={{ fontFamily: 'Arial, sans-serif', color: '#FFFFFF', marginTop: '-35px' }}>
-                        Remote Work Analysis
-                    </Link>
+                        <Link to="/Training" className="text-left text-xl font-semibold hover:text-brown-800" style={{ 
+                                fontFamily: 'Arial, sans-serif', 
+                                color: '#FFFFFF', 
+                                whiteSpace: 'nowrap', 
+                                padding: '8px',
+                                fontSize: '1.2rem',
+                                maxWidth: '100%'  }}>
+                            Training and Development
+                        </Link>
+                    </div>
+                       
+
+                        
+                    
                 </div>
 
             </div>   

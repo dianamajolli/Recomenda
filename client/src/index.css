@@ -3,6 +3,7 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr; /* Creates two columns of equal width */
 	gap: 20px; /* Adjust the gap between columns as needed */
+	
   }
 
   /* You can adjust the .first-column and .second-column classes as needed to apply specific styles to each column's content */
