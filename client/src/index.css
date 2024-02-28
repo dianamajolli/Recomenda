@@ -1,38 +1,52 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Step 1: Define a two-column layout */
+.container {
+	display: grid;
+	grid-template-columns: 1fr 1fr; /* Creates two columns of equal width */
+	gap: 20px; /* Adjust the gap between columns as needed */
+  }
 
-@layer components {
+  /* You can adjust the .first-column and .second-column classes as needed to apply specific styles to each column's content */
+  
+  /* Step 2: Apply provided styles (Tailwind and custom CSS) to content in the second column */
+  
+  /* Tailwind directives (Note: these are processed by Tailwind CSS during build and won't appear in the final CSS) */
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  
+  /* Custom component layer and other styles specifically for content in the second column */
+  @layer components {
 	.scroll-width {
-		scrollbar-width: thin;
+	  scrollbar-width: thin;
 	}
-
+  
 	.b-bottom > tr {
-		@apply border border-solid border-slate-100;
+	  @apply border border-solid border-slate-100;
 	}
-
+  
 	.b-color-even > tr:nth-of-type(even) {
-		@apply bg-[#f3f3f3];
+	  @apply bg-[#f3f3f3];
 	}
-
+  
 	.b-color-last > tr:last-of-type {
-		@apply border-2 border-solid border-b-green-700;
+	  @apply border-2 border-solid border-b-green-700;
 	}
-
+  
 	.b-color-none > tr:last-of-type {
-		@apply border-none;
+	  @apply border-none;
 	}
-}
-
-*,
-::after,
-::before {
+  }
+  
+  /* Global styles that affect the whole page */
+  *,
+  ::after,
+  ::before {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-}
-
-:root {
+  }
+  
+  :root {
 	box-sizing: border-box;
 	font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
 	font-size: 16px;
@@ -40,4 +54,4 @@
 	font-weight: 400;
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
-}
+  }

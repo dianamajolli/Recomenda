@@ -32,30 +32,35 @@ const HomePage: React.FC = () => {
   
     return (
         <div className="App h-screen flex flex-col items-center">
-				
+			<div className="w-full grid grid-cols-2 gap-4">
+
+                
+                <div className="column-1">
+                
+            
+                    <h1 className="text-left w-full text-3xl p-8 font-semibold" style={{ fontFamily: 'Arial, sans-serif', color: '#FFFFFF' }}>
+                        HR Analysis
+                    </h1>
+
+                                
+
+                    <Link to="/Performance" className="text-left w-full text-xl p-8 font-semibold hover:text-brown-800" style={{ fontFamily: 'Arial, sans-serif', color: '#FFFFFF', marginTop: '-35px' }}>
+                        Performance Metrics
+                    </Link>
+
+                    <Link to="/RemoteWork" className="text-left w-full text-xl p-8 font-semibold hover:text-brown-800" style={{ fontFamily: 'Arial, sans-serif', color: '#FFFFFF', marginTop: '-35px' }}>
+                        Remote Work Analysis
+                    </Link>
+                </div>
+
+            </div>   
+            <div className="column-2">
                 <GetValueContext.Provider value={{ deleteId, updateId }}>
                     <Modal employeeList={employeeList} />
                 </GetValueContext.Provider>
-
-                <h1 className="text-white text-center text-6xl p-8 mt-20 font-semibold" style={{ fontFamily: 'Arial, sans-serif' }}>
- 					 Recomenda
+                <h1 className="text-white text-center text-6xl p-8 mt-3 font-semibold" style={{ fontFamily: 'Arial, sans-serif' }}>
+ 					 
 				</h1>
-
-				<h1 className="text-left w-full text-3xl p-8 font-semibold" style={{ fontFamily: 'Arial, sans-serif', color: '#FFFFFF' }}>
-   					 HR Analysis
-				</h1>
-
-				
-				<Link to="/RemoteWork" className="text-left w-full text-xl p-8 font-semibold hover:text-brown-800" style={{ fontFamily: 'Arial, sans-serif', color: '#FFFFFF', marginTop: '-5px' }}>
-    				Remote Work Analysis
-				</Link>
-
-                <Link to="/Performance" className="text-left w-full text-xl p-8 font-semibold hover:text-brown-800" style={{ fontFamily: 'Arial, sans-serif', color: '#FFFFFF', marginTop: '-35px' }}>
-    				Performance Metrics
-				</Link>
-
-               
-
                 <div className="bg-slate-50 p-8 my-0 mx-12 min-w-[920px] max-w-[1028px] rounded-2xl max-h-[28rem]">
                     <div className="child:mx-4 w-full flex justify-between">
                         <SortMenuBtn setSortOptions={setSortOptions} />
@@ -63,9 +68,12 @@ const HomePage: React.FC = () => {
                         <InsertBtn />
                     </div>
 
+                
                     <EmployeeDataList employeeList={employeeList} setDeleteId={setDeleteId} setUpdateId={setUpdateId} />
                 </div>
-            </div>
+        
+            </div>    
+        </div>
   );
 };
 
