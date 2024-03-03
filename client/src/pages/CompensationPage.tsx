@@ -3,7 +3,7 @@ import React from 'react';
 const CompensationPage: React.FC = () => {
   return (
     <div className="compensation-page-container">
-      <h1>Compensation and benefits for employees</h1>
+      <p>Compensation and benefits for employees</p>
     </div>
   );
 };

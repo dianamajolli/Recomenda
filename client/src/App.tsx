@@ -8,15 +8,14 @@ import CompensationPage from './pages/CompensationPage';
 
 export default function App() {
     return (
-        <Router>
-            
+        <Router>            
                 <Routes>
 					<Route path="/" element={<Homepage />} />
+					<Route path="/Login" element={<LoginPage/>} />
+                    <Route path="/Performance" element={<PerformancePage/>} />
+                    <Route path="/Training" element={<TrainingPage/>} />
+                    <Route path="/Compensation" element={<CompensationPage/>} />
                     <Route path="/RemoteWork" element={<RemoteWorkPage />} />
-					<Route path="/LoginPage" element={<LoginPage/>} />
-                    <Route path="/PerformancePage" element={<PerformancePage/>} />
-                    <Route path="/TrainingPage" element={<TrainingPage/>} />
-                    <Route path="/CompensationPage" element={<CompensationPage/>} />
                 </Routes>
         </Router>
     );
