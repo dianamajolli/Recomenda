@@ -73,6 +73,16 @@ const HomePage: React.FC = () => {
                                 maxWidth: '100%'  }}>
                             Training and Development
                         </Link>
+
+                        <Link to="/Compensation" className="text-left text-xl font-semibold hover:text-brown-800" style={{ 
+                                fontFamily: 'Arial, sans-serif', 
+                                color: '#FFFFFF', 
+                                whiteSpace: 'nowrap', 
+                                padding: '8px',
+                                fontSize: '1.2rem',
+                                maxWidth: '100%'  }}>
+                            Compensation and Benefits
+                        </Link>
                     </div>
                        
 
