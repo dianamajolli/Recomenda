@@ -17,11 +17,11 @@ export const deleteEmployee = asyncHandler(
 
 export const insertEmployee = asyncHandler(
 	async (req: Request, res: Response) => {
-		const { firstName, lastName, age, sex, phoneNumber } = req.body;
-		const data = [firstName, lastName, age, sex, phoneNumber];
+		const { firstName, lastName, age, sex, bonus, salary } = req.body;
+		const data = [firstName, lastName, age, sex, bonus, salary];
 		const sql =
-			'INSERT INTO employees (firstName,lastName,age,sex,phoneNumber) ' +
-			'VALUES(?,?,?,?,?)';
+			'INSERT INTO employees (firstName,lastName,age,sex,bonus,salary) ' +
+			'VALUES(?,?,?,?,?,?)';
 		connection.query(sql, [...data], (err: any) => {
 			if (err) {
 				console.error('Error loading data:', err);
@@ -59,11 +59,11 @@ export const showEmployees = asyncHandler(
 
 export const updateEmployees = asyncHandler(
 	async (req: Request, res: Response) => {
-		const { firstName, lastName, age, sex, phoneNumber, id } = req.body;
-		const data = [firstName, lastName, age, sex, phoneNumber, id];
+		const { firstName, lastName, age, sex, bonus, salary, id } = req.body;
+		const data = [firstName, lastName, age, sex, bonus, salary, id];
 		const sql =
 			'UPDATE employees ' +
-			'SET firstName=?,lastName=?,age=?,sex=?,phoneNumber=? ' +
+			'SET firstName=?,lastName=?,age=?,sex=?,bonus=?,salary=? ' +
 			'WHERE id=?';
 		connection.query(sql, [...data], (err: any) => {
 			if (err) {

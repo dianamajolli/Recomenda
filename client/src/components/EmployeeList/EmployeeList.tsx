@@ -16,7 +16,7 @@ export default function EmployeeDataList({
 						<EmptyTable />
 					) : (
 						employeeList.map((values) => {
-							const { id, firstName, lastName, age, sex, phoneNumber } = values;
+							const { id, firstName, lastName, age, sex, bonus, salary } = values;
 							return (
 								<tr
 									className="font-semibold child-td:py-1 child-td:px-4 child-td:text-center"
@@ -27,7 +27,8 @@ export default function EmployeeDataList({
 									<td>{lastName}</td>
 									<td>{age}</td>
 									<td>{sex}</td>
-									<td>{phoneNumber}</td>
+									<td>{bonus}</td>
+									<td>{salary}</td>
 									<td>
 										<UpdateBtn setUpdateId={setUpdateId} updateId={id} />
 										<DeleteBtn setDeleteId={setDeleteId} deleteId={id} />
@@ -51,7 +52,8 @@ function TableHeader() {
 				<td>LAST NAME</td>
 				<td>AGE</td>
 				<td>SEX</td>
-				<td>PHONE NUMBER</td>
+				<td>BONUS</td>
+				<td>SALARY</td>
 				<td>ACTIONS</td>
 			</tr>
 		</thead>

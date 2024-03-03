@@ -24,7 +24,8 @@ export const InsertQuery = async (values: queryType) => {
 			lastName: formatPascalCase(values.lastName),
 			age: parseInt(values.age),
 			sex: values.sex,
-			phoneNumber: values.phoneNumber,
+			bonus: values.bonus,
+			salary: values.salary,
 		})
 		.catch((error) => console.log(error));
 };
@@ -37,7 +38,8 @@ export const UpdateQuery = async (values: queryType, id: string) => {
 			lastName: formatPascalCase(values.lastName),
 			age: parseInt(values.age),
 			sex: values.sex,
-			phoneNumber: values.phoneNumber,
+			bonus: values.bonus,
+			salary: values.salary,
 			id: parseInt(id),
 		})
 		.catch((error) => console.log(error));

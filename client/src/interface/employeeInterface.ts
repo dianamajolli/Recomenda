@@ -6,7 +6,8 @@ export interface employeeInterface {
 	lastName: string;
 	age: number;
 	sex: string;
-	phoneNumber: string;
+	bonus: number;
+	salary: number;
 }
 
 export interface employeePropsInterface {

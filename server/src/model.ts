@@ -7,7 +7,8 @@ const employeesTable =
 	'  lastName VARCHAR(255) NULL,\n' +
 	'  age INT NULL,\n' +
 	'  sex VARCHAR(1) NULL,\n' +
-	'  phoneNumber VARCHAR(255) NULL,\n' +
+	'  bonus INT NULL ,\n' +
+	'  salary INT NULL ,\n' +
 	'  PRIMARY KEY (id)\n' +
 	');\n';
 

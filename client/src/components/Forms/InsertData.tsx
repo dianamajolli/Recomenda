@@ -23,7 +23,8 @@ export default function InsertData() {
 	const [valFname, changeFname, fnameError] = useValidate('firstName');
 	const [valLname, changelname, lnameError] = useValidate('lastName');
 	const [valAge, changeAge, ageError] = useValidate('age');
-	const [valPhone, changePhone, phoneError] = useValidate('phoneNumber');
+	const [valBonus, changeBonus, bonusError] = useValidate('bonus');
+	const [valSalary, changeSalary, salaryError] = useValidate('salary');
 
 	function onSubmit(data: FieldValues) {
 		console.log(data);
@@ -111,16 +112,30 @@ export default function InsertData() {
 
 					<TextField
 						required
-						{...register('phoneNumber', { required: true })}
-						error={phoneError !== null}
-						helperText={phoneError}
-						name="phoneNumber"
+						{...register('bonus', { required: true })}
+						error={bonusError !== null}
+						helperText={bonusError}
+						name="bonus"
 						sx={{ my: 1 }}
-						label="Phone Number"
+						label="Bonus"
 						autoComplete="off"
 						variant="outlined"
 						size="small"
-						onChange={changePhone}
+						onChange={changeBonus}
+					/>
+
+					<TextField
+						required
+						{...register('salary', { required: true })}
+						error={salaryError !== null}
+						helperText={salaryError}
+						name="salary"
+						sx={{ my: 1 }}
+						label="Salary"
+						autoComplete="off"
+						variant="outlined"
+						size="small"
+						onChange={changeSalary}
 					/>
 
 					<footer className="inline-flex justify-between mt-auto">
@@ -139,8 +154,8 @@ export default function InsertData() {
 							color="success"
 							type="submit"
 							disabled={
-								(valFname && valLname && valAge && valPhone) === '' ||
-								(fnameError || lnameError || ageError || phoneError) !== null
+								(valFname && valLname && valAge && valBonus) === '' ||
+								(fnameError || lnameError || ageError || bonusError) !== null
 							}
 						>
 							Confirm

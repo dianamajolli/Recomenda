@@ -31,8 +31,10 @@ function UpdateData({ employeeList }: employeePropsInterface) {
 		useValidate('lastName');
 	const [valAge, changeAge, ageError, ageDefault] = useValidate('age');
 	const [valSex, changeSex, sexError, sexDefault] = useValidate('sex');
-	const [valPhone, changePhone, phoneError, phoneDefault] =
-		useValidate('phoneNumber');
+	const [valBonus, changeBonus, bonusError, bonusDefault] =
+		useValidate('bonus');
+	const [valSalary, changeSalary, salaryError, salaryDefault] =
+		useValidate('salary');
 
 	function onSubmit(data: FieldValues) {
 		console.log(data);
@@ -41,13 +43,14 @@ function UpdateData({ employeeList }: employeePropsInterface) {
 	}
 
 	useEffect(() => {
-		const { firstName, lastName, age, sex, phoneNumber } =
+		const { firstName, lastName, age, sex, bonus, salary } =
 			employeeList[indexId];
 		fnameDefault(firstName);
 		lnameDefault(lastName);
 		ageDefault(age.toString());
 		sexDefault(sex);
-		phoneDefault(phoneNumber);
+		bonusDefault(bonus);
+		salaryDefault(salary);
 	}, []);
 
 	return (
@@ -130,17 +133,31 @@ function UpdateData({ employeeList }: employeePropsInterface) {
 					</FormControl>
 
 					<TextField
-						{...register('phoneNumber', { required: true })}
+						{...register('bonus', { required: true })}
 						sx={{ my: 1 }}
-						error={phoneError !== null}
-						helperText={phoneError}
-						label="Phone Number"
+						error={bonusError !== null}
+						helperText={bonusError}
+						label="Bonus"
 						variant="outlined"
-						name="phoneNumber"
+						name="bonus"
 						size="small"
 						autoComplete="off"
-						defaultValue={employeeList[indexId].phoneNumber}
-						onChange={changePhone}
+						defaultValue={employeeList[indexId].bonus}
+						onChange={changeBonus}
+					/>
+
+					<TextField
+						{...register('salary', { required: true })}
+						sx={{ my: 1 }}
+						error={salaryError !== null}
+						helperText={salaryError}
+						label="Salary"
+						variant="outlined"
+						name="salary"
+						size="small"
+						autoComplete="off"
+						defaultValue={employeeList[indexId].salary}
+						onChange={changeSalary}
 					/>
 
 					<footer className="inline-flex justify-between mt-auto">
@@ -159,8 +176,8 @@ function UpdateData({ employeeList }: employeePropsInterface) {
 							color="success"
 							type="submit"
 							disabled={
-								(valFname && valLname && valAge && valPhone) === '' ||
-								(fnameError || lnameError || ageError || phoneError) !== null
+								(valFname && valLname && valAge && valBonus && valSalary) === '' ||
+								(fnameError || lnameError || ageError || bonusError || salaryError ) !== null
 							}
 						>
 							Confirm

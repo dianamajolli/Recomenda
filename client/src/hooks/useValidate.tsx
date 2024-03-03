@@ -64,7 +64,17 @@ export function useValidate(fieldName: string) {
 				}
 				break;
 
-			case "phoneNumber":
+			case "bonus":
+				if (value.length > 11) {
+					setHandleError(error.digitLimit);
+				} else if (!validateNumber(value)) {
+					setHandleError(error.numberOnly);
+				} else {
+					setHandleError(null);
+				}
+				break;
+
+			case "salary":
 				if (value.length > 11) {
 					setHandleError(error.digitLimit);
 				} else if (!validateNumber(value)) {
