@@ -5,6 +5,7 @@ import LoginPage from './pages/LoginPage';
 import PerformancePage from './pages/PerformancePage'; 
 import TrainingPage from './pages/TrainingPage';
 import CompensationPage from './pages/CompensationPage';
+import RecruitmentPage from './pages/RecruitmentPage';
 
 export default function App() {
     return (
@@ -16,6 +17,7 @@ export default function App() {
                     <Route path="/Training" element={<TrainingPage/>} />
                     <Route path="/Compensation" element={<CompensationPage/>} />
                     <Route path="/RemoteWork" element={<RemoteWorkPage />} />
+                    <Route path="/Recruitment" element={<RecruitmentPage />} />
                 </Routes>
         </Router>
     );
