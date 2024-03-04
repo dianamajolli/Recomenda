@@ -10,7 +10,7 @@ const RemoteWorkPage: React.FC = () => {
   return (
 
     <div className="remote-work-page-container">
-      <h1>Remote Work Survey </h1>
+      
       <PowerBIEmbed
                 embedConfig={{
                     type: 'report', // Supported types: report, dashboard, tile, visual, qna, paginated report and create
