@@ -38,18 +38,18 @@ const HomePage: React.FC = () => {
                 <div className="column-1">
                 
             
-                    <h1 className="text-left w-full text-3xl p-8 font-semibold" style={{ fontFamily: 'Arial, sans-serif', color: '#FFFFFF' }}>
+                    <h1 className="text-left w-full text-4xl p-8 font-semibold" style={{ fontFamily: 'Arial, sans-serif', color: '#FFFFFF',padding: '68px' }}>
                         HR Analysis
                     </h1>
 
                                 
-                    <div className="links-row" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', gap: '16px', paddingLeft: '8px', flexWrap: 'nowrap' }}>
+                    <div className="links-row" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', gap: '16px', paddingLeft: '38px', marginTop: '-58px',flexWrap: 'nowrap' }}>
                         <Link to="/Performance" className="text-left text-xl font-semibold hover:text-brown-800" style={{ 
                                 fontFamily: 'Arial, sans-serif', 
                                 color: '#FFFFFF', 
                                 whiteSpace: 'nowrap', 
-                                padding: '8px',
-                                fontSize: '1.2rem',
+                                padding: '38px',
+                                fontSize: '1.3rem',
                                 maxWidth: '100%' }}>
                             Performance Metrics
                         </Link>
@@ -58,8 +58,8 @@ const HomePage: React.FC = () => {
                                 fontFamily: 'Arial, sans-serif', 
                                 color: '#FFFFFF', 
                                 whiteSpace: 'nowrap', 
-                                padding: '8px',
-                                fontSize: '1.2rem',
+                                padding: '68px',
+                                fontSize: '1.3rem',
                                 maxWidth: '100%'  }}>
                             Remote Work Analysis
                         </Link>
@@ -68,8 +68,8 @@ const HomePage: React.FC = () => {
                                 fontFamily: 'Arial, sans-serif', 
                                 color: '#FFFFFF', 
                                 whiteSpace: 'nowrap', 
-                                padding: '8px',
-                                fontSize: '1.2rem',
+                                padding: '68px',
+                                fontSize: '1.3rem',
                                 maxWidth: '100%'  }}>
                             Training and Development
                         </Link>
@@ -78,8 +78,8 @@ const HomePage: React.FC = () => {
                                 fontFamily: 'Arial, sans-serif', 
                                 color: '#FFFFFF', 
                                 whiteSpace: 'nowrap', 
-                                padding: '8px',
-                                fontSize: '1.2rem',
+                                padding: '68px',
+                                fontSize: '1.3rem',
                                 maxWidth: '100%'  }}>
                             Compensation and Benefits
                         </Link>
@@ -88,8 +88,8 @@ const HomePage: React.FC = () => {
                                 fontFamily: 'Arial, sans-serif', 
                                 color: '#FFFFFF', 
                                 whiteSpace: 'nowrap', 
-                                padding: '8px',
-                                fontSize: '1.2rem',
+                                padding: '68px',
+                                fontSize: '1.3rem',
                                 maxWidth: '100%'  }}>
                             Recruitment
                         </Link>
