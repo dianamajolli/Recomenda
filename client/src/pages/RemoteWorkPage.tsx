@@ -1,9 +1,8 @@
 import React from 'react';
-// import * as powerbiClient from 'powerbi-client';
-// import * as models from 'powerbi-models';
 import { PowerBIEmbed } from 'powerbi-client-react';
 import { models } from 'powerbi-client';
 import './../index.css';
+import Footer from "./../components/Footer";
 
 const RemoteWorkPage: React.FC = () => {
 
@@ -42,7 +41,9 @@ const RemoteWorkPage: React.FC = () => {
                 getEmbeddedComponent={(embeddedReport) => {
                     window.report = embeddedReport;
                 } } />
-    </div>
+         
+    <Footer />
+  </div>
   );
 };
 
