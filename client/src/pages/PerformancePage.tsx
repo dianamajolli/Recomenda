@@ -36,7 +36,7 @@ const PerformancePage: React.FC = () => {
                 cssClassName={"Embed-container"}
 
                 getEmbeddedComponent={(embeddedReport) => {
-                    window.report = embeddedReport;
+                    window.Report = embeddedReport;
                 } } />
          
     <Footer />
