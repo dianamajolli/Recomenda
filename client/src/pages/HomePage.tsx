@@ -8,6 +8,7 @@ import Modal, { useModal } from './../components/Modal/Modal';
 import SearchBar from './../components/SearchBar/SearchBar';
 import { GetValueContext } from './../contexts/Contexts';
 import { Link } from 'react-router-dom';
+import Footer from "./../components/Footer";
 
 const HomePage: React.FC = () => {
     const [employeeList, setEmployeeList] = useState([]);
@@ -119,7 +120,8 @@ const HomePage: React.FC = () => {
                     <EmployeeDataList employeeList={employeeList} setDeleteId={setDeleteId} setUpdateId={setUpdateId} />
                 </div>
         
-            </div>    
+            </div> 
+               
         </div>
   );
 };
