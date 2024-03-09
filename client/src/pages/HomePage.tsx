@@ -9,6 +9,7 @@ import SearchBar from './../components/SearchBar/SearchBar';
 import { GetValueContext } from './../contexts/Contexts';
 import { Link } from 'react-router-dom';
 import Footer from "./../components/Footer";
+import NavBar from "../components/NavBar";
 
 const HomePage: React.FC = () => {
     const [employeeList, setEmployeeList] = useState([]);
@@ -30,100 +31,29 @@ const HomePage: React.FC = () => {
             sortTable(sortOptions, setEmployeeList);
         } else ReadQuery(setEmployeeList);
     }, [insertModal, deleteModal, updateModal, sortOptions, searchQuery]);
-  
+
     return (
-        <div className="App h-screen flex flex-col items-center">
-			<div className="w-full grid grid-cols-2 gap-4">
+        <div className="App h-screen flex flex-col min-h-screen items-center">
+            <NavBar />
+                <div className="">
+                    <GetValueContext.Provider value={{ deleteId, updateId }}>
+                        <Modal employeeList={employeeList} />
+                    </GetValueContext.Provider>
 
-                
-                <div className="column-1">
-                
-            
-                    <h1 className="text-left w-full text-4xl p-8 font-semibold" style={{ fontFamily: 'Arial, sans-serif', color: '#FFFFFF',padding: '68px' }}>
-                        HR Analysis
-                    </h1>
+                    <div className="bg-slate-50 rounded-2xl  p-8 my-0 mx-12 min-w-[920px] min-h-[600px] max-w-[1028px] max-h-[28rem]">
+                        <div className="child:mx-4 w-full flex justify-between">
+                            <SortMenuBtn setSortOptions={setSortOptions} />
+                            <SearchBar employeeList={employeeList} setSearchQuery={setSearchQuery} />
+                            <InsertBtn />
+                        </div>
 
-                                
-                    <div className="links-row" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', gap: '16px', paddingLeft: '38px', marginTop: '-58px',flexWrap: 'nowrap' }}>
-                        <Link to="/Performance" className="text-left text-xl font-semibold hover:text-brown-800" style={{ 
-                                fontFamily: 'Arial, sans-serif', 
-                                color: '#FFFFFF', 
-                                whiteSpace: 'nowrap', 
-                                padding: '38px',
-                                fontSize: '1.3rem',
-                                maxWidth: '100%' }}>
-                            Performance Metrics
-                        </Link>
-
-                        <Link to="/RemoteWork" className="text-left text-xl font-semibold hover:text-brown-800" style={{ 
-                                fontFamily: 'Arial, sans-serif', 
-                                color: '#FFFFFF', 
-                                whiteSpace: 'nowrap', 
-                                padding: '68px',
-                                fontSize: '1.3rem',
-                                maxWidth: '100%'  }}>
-                            Remote Work Analysis
-                        </Link>
-
-                        <Link to="/Training" className="text-left text-xl font-semibold hover:text-brown-800" style={{ 
-                                fontFamily: 'Arial, sans-serif', 
-                                color: '#FFFFFF', 
-                                whiteSpace: 'nowrap', 
-                                padding: '68px',
-                                fontSize: '1.3rem',
-                                maxWidth: '100%'  }}>
-                            Training and Development
-                        </Link>
-
-                        <Link to="/Compensation" className="text-left text-xl font-semibold hover:text-brown-800" style={{ 
-                                fontFamily: 'Arial, sans-serif', 
-                                color: '#FFFFFF', 
-                                whiteSpace: 'nowrap', 
-                                padding: '68px',
-                                fontSize: '1.3rem',
-                                maxWidth: '100%'  }}>
-                            Compensation and Benefits
-                        </Link>
-
-                        <Link to="/Recruitment" className="text-left text-xl font-semibold hover:text-brown-800" style={{ 
-                                fontFamily: 'Arial, sans-serif', 
-                                color: '#FFFFFF', 
-                                whiteSpace: 'nowrap', 
-                                padding: '68px',
-                                fontSize: '1.3rem',
-                                maxWidth: '100%'  }}>
-                            Recruitment
-                        </Link>
+                        <EmployeeDataList employeeList={employeeList} setDeleteId={setDeleteId} setUpdateId={setUpdateId} />
                     </div>
-                       
-
-                        
-                    
                 </div>
-
-            </div>   
-            <div className="column-2">
-                <GetValueContext.Provider value={{ deleteId, updateId }}>
-                    <Modal employeeList={employeeList} />
-                </GetValueContext.Provider>
-                <h1 className="text-white text-center text-6xl p-8 mt-3 font-semibold" style={{ fontFamily: 'Arial, sans-serif' }}>
- 					 
-				</h1>
-                <div className="bg-slate-50 p-8 my-0 mx-12 min-w-[920px] max-w-[1028px] rounded-2xl max-h-[28rem]">
-                    <div className="child:mx-4 w-full flex justify-between">
-                        <SortMenuBtn setSortOptions={setSortOptions} />
-                        <SearchBar employeeList={employeeList} setSearchQuery={setSearchQuery} />
-                        <InsertBtn />
-                    </div>
-
-                
-                    <EmployeeDataList employeeList={employeeList} setDeleteId={setDeleteId} setUpdateId={setUpdateId} />
-                </div>
-        
-            </div> 
-               
+            <div style={{ marginTop: '80px'}}/>
+            <Footer />
         </div>
-  );
+    );
 };
 
 export default HomePage;

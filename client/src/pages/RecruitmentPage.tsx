@@ -3,10 +3,12 @@ import { PowerBIEmbed } from 'powerbi-client-react';
 import { models } from 'powerbi-client';
 import './../index.css';
 import Footer from "./../components/Footer";
+import NavBar from "../components/NavBar";
 
 const RecruitmentPage: React.FC = () => {
   return (
     <div className="compensation-page-container">
+        <NavBar />
       <PowerBIEmbed
                 embedConfig={{
                     type: 'report', // Supported types: report, dashboard, tile, visual, qna, paginated report and create

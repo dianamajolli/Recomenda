@@ -35,34 +35,83 @@ const NavBar = () => {
   };
 
   return (
-    <div className="relative overflow-x-auto bg-white">
-      <div className="hidden md:flex justify-between items-center p-1 mr-5 ml-1">
-        <div className="z-10 hidden md:flex gap-16 [font-family:'Inria_Serif',Helvetica] font-bold [color:#342f19] text-lg ">
-          <Link to="/" className="hover:[color:#7d5844]">
-            
+    <div className="w-full grid grid-cols-2 gap-4">
+
+
+      <div className="column-1">
+
+        <div style={{ marginTop: '30px', marginBottom: '10px' }}>
+          <Link to="/" className="text-left w-full text-4xl p-8 font-semibold" style={{
+            fontFamily: 'Arial, sans-serif', color: '#7724a7', paddingLeft: '68px'
+          }}>
+            Recomenda
           </Link>
-          <Link to="/Dashboard" className="hover:[color:#7d5844]">
-            
+        </div>
+
+        <div className="links-row" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', gap: '16px', paddingLeft: '38px', marginTop: '-58px', flexWrap: 'nowrap' }}>
+          <Link to="/Performance" className="text-left text-xl font-semibold hover:text-brown-800" style={{
+            fontFamily: 'Arial, sans-serif',
+            color: '#FFFFFF',
+            whiteSpace: 'nowrap',
+            padding: '38px',
+            fontSize: '1.3rem',
+            maxWidth: '100%'
+          }}>
+            Performance Metrics
           </Link>
 
-          <Link to="/myaccount"></Link>
+          <Link to="/RemoteWork" className="text-left text-xl font-semibold hover:text-brown-800" style={{
+            fontFamily: 'Arial, sans-serif',
+            color: '#FFFFFF',
+            whiteSpace: 'nowrap',
+            padding: '68px',
+            fontSize: '1.3rem',
+            maxWidth: '100%'
+          }}>
+            Remote Work Analysis
+          </Link>
+
+          <Link to="/Training" className="text-left text-xl font-semibold hover:text-brown-800" style={{
+            fontFamily: 'Arial, sans-serif',
+            color: '#FFFFFF',
+            whiteSpace: 'nowrap',
+            padding: '68px',
+            fontSize: '1.3rem',
+            maxWidth: '100%'
+          }}>
+            Training and Development
+          </Link>
+
+          <Link to="/Compensation" className="text-left text-xl font-semibold hover:text-brown-800" style={{
+            fontFamily: 'Arial, sans-serif',
+            color: '#FFFFFF',
+            whiteSpace: 'nowrap',
+            padding: '68px',
+            fontSize: '1.3rem',
+            maxWidth: '100%'
+          }}>
+            Compensation and Benefits
+          </Link>
+
+          <Link to="/Recruitment" className="text-left text-xl font-semibold hover:text-brown-800" style={{
+            fontFamily: 'Arial, sans-serif',
+            color: '#FFFFFF',
+            whiteSpace: 'nowrap',
+            padding: '68px',
+            fontSize: '1.3rem',
+            maxWidth: '100%'
+          }}>
+            Recruitment
+          </Link>
         </div>
+
+
+
+
       </div>
 
-      {/* <div className="flex justify-between ">
-        <Link to="/">
-          <img
-            className="fixed w-[85px] h-[64px] top-0 left-0 "
-            //alt="Logo color updated"
-            src="logoRecomenda.png"
-          />
-        </Link>
-        <button
-          onClick={toggleMenu}
-          className="md:hidden text-gray-800 "
-        ></button>
-      </div> */}
     </div>
+
   );
 };
 
