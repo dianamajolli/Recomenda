@@ -1,9 +1,6 @@
 import React from 'react';
 
-// const Notification = ({ message, onClose }) => {
-const Notification = () => {
-    const message = "TODO";
-    const onClose = () => {};
+const Notification = ( {message, onClose}) => {
     if (!message) return null;
 
     return (

@@ -7,26 +7,25 @@ const NavBar = () => {
   //const user = useSelector((state) => state.auth.user);
   const [userInfo, setUserInfo] = useState(null);
   //const uid = user?.uid;
-  const uid = "TODO";
 
-  useEffect(() => {
-    const fetchUserData = async () => {
-      if (!uid) return;
+  // useEffect(() => {
+  //   const fetchUserData = async () => {
+  //     if (!uid) return;
 
-      try {
-        const response = await axios.get(`/api/user/profile/${uid}`);
-        if (response.data.success) {
-          setUserInfo(response.data.data);
-        } else {
-          console.error("User not found or error fetching user data");
-        }
-      } catch (error) {
-        console.error("Error fetching user data:", error);
-      }
-    };
+  //     try {
+  //       const response = await axios.get(`/api/user/profile/${uid}`);
+  //       if (response.data.success) {
+  //         setUserInfo(response.data.data);
+  //       } else {
+  //         console.error("User not found or error fetching user data");
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching user data:", error);
+  //     }
+  //   };
 
-    fetchUserData();
-  }, [uid]);
+  //   fetchUserData();
+  // }, [uid]);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
