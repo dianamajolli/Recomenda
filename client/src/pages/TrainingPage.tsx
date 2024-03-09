@@ -3,13 +3,14 @@ import { PowerBIEmbed } from 'powerbi-client-react';
 import { models } from 'powerbi-client';
 import './../index.css';
 import Footer from "./../components/Footer";
-
+import NavBar from "../components/NavBar";
 
 const TrainingPage = () => {
-  
-  return (
-    <div className="training-page-container">
-      <PowerBIEmbed
+
+    return (
+        <div className="training-page-container">
+            <NavBar />
+            <PowerBIEmbed
                 embedConfig={{
                     type: 'report', // Supported types: report, dashboard, tile, visual, qna, paginated report and create
                     id: '5bb25cc5-abfe-40ec-a0a8-29d6ac43fc20',
@@ -28,9 +29,9 @@ const TrainingPage = () => {
                 }}
 
                 eventHandlers={new Map([
-                    ['loaded', function () { console.log('Report loaded'); } ],
-                    ['rendered', function () { console.log('Report rendered'); } ],
-                    ['error', function (event) { console.log(event.detail); } ],
+                    ['loaded', function () { console.log('Report loaded'); }],
+                    ['rendered', function () { console.log('Report rendered'); }],
+                    ['error', function (event) { console.log(event.detail); }],
                     ['visualClicked', () => console.log('visual clicked')],
                     ['pageChanged', (event) => console.log(event)],
                 ])}
@@ -39,11 +40,11 @@ const TrainingPage = () => {
 
                 getEmbeddedComponent={(embeddedReport) => {
                     window.report = embeddedReport;
-                } } />
-         
-    <Footer />
-    </div>
-    
-  );
+                }} />
+
+            <Footer />
+        </div>
+
+    );
 };
 export default TrainingPage;

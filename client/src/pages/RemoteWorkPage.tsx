@@ -3,14 +3,14 @@ import { PowerBIEmbed } from 'powerbi-client-react';
 import { models } from 'powerbi-client';
 import './../index.css';
 import Footer from "./../components/Footer";
+import NavBar from "../components/NavBar";
 
 const RemoteWorkPage: React.FC = () => {
 
-  return (
-
-    <div className="remote-work-page-container">
-      
-      <PowerBIEmbed
+    return (
+        <div className="remote-work-page-container">
+            <NavBar />
+            <PowerBIEmbed
                 embedConfig={{
                     type: 'report', // Supported types: report, dashboard, tile, visual, qna, paginated report and create
                     id: '08e26cbf-77d4-430a-a291-c4986e1a7226',
@@ -29,9 +29,9 @@ const RemoteWorkPage: React.FC = () => {
                 }}
 
                 eventHandlers={new Map([
-                    ['loaded', function () { console.log('Report loaded'); } ],
-                    ['rendered', function () { console.log('Report rendered'); } ],
-                    ['error', function (event) { console.log(event.detail); } ],
+                    ['loaded', function () { console.log('Report loaded'); }],
+                    ['rendered', function () { console.log('Report rendered'); }],
+                    ['error', function (event) { console.log(event.detail); }],
                     ['visualClicked', () => console.log('visual clicked')],
                     ['pageChanged', (event) => console.log(event)],
                 ])}
@@ -40,11 +40,11 @@ const RemoteWorkPage: React.FC = () => {
 
                 getEmbeddedComponent={(embeddedReport) => {
                     window.report = embeddedReport;
-                } } />
-         
-    <Footer />
-  </div>
-  );
+                }} />
+
+            <Footer />
+        </div>
+    );
 };
 
 

@@ -3,11 +3,13 @@ import { PowerBIEmbed } from 'powerbi-client-react';
 import { models } from 'powerbi-client';
 import './../index.css';
 import Footer from "./../components/Footer";
+import NavBar from "../components/NavBar";
 
 const CompensationPage: React.FC = () => {
-  return (
-    <div className="compensation-page-container">
-      <PowerBIEmbed
+    return (
+        <div className="compensation-page-container">
+            <NavBar />
+            <PowerBIEmbed
                 embedConfig={{
                     type: 'report', // Supported types: report, dashboard, tile, visual, qna, paginated report and create
                     id: 'e14eff4b-582b-4e36-8dc1-15731de69e1e',
@@ -26,9 +28,9 @@ const CompensationPage: React.FC = () => {
                 }}
 
                 eventHandlers={new Map([
-                    ['loaded', function () { console.log('Report loaded'); } ],
-                    ['rendered', function () { console.log('Report rendered'); } ],
-                    ['error', function (event) { console.log(event.detail); } ],
+                    ['loaded', function () { console.log('Report loaded'); }],
+                    ['rendered', function () { console.log('Report rendered'); }],
+                    ['error', function (event) { console.log(event.detail); }],
                     ['visualClicked', () => console.log('visual clicked')],
                     ['pageChanged', (event) => console.log(event)],
                 ])}
@@ -37,11 +39,11 @@ const CompensationPage: React.FC = () => {
 
                 getEmbeddedComponent={(embeddedReport) => {
                     window.report = embeddedReport;
-                } } />
-         
-    <Footer />
-    </div>
-  );
+                }} />
+
+            <Footer />
+        </div>
+    );
 };
 
 export default CompensationPage;

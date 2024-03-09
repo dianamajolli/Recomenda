@@ -3,11 +3,13 @@ import { PowerBIEmbed } from 'powerbi-client-react';
 import { models } from 'powerbi-client';
 import './../index.css';
 import Footer from "./../components/Footer";
+import NavBar from "../components/NavBar";
 
 const PerformancePage: React.FC = () => {
-  return (
-    <div className="performance-page-container">
-      <PowerBIEmbed
+    return (
+        <div className="performance-page-container">
+            <NavBar />
+            <PowerBIEmbed
                 embedConfig={{
                     type: 'report', // Supported types: report, dashboard, tile, visual, qna, paginated report and create
                     id: '3c66e9e6-8e50-48f3-bc79-86002fb10a24',
@@ -26,9 +28,9 @@ const PerformancePage: React.FC = () => {
                 }}
 
                 eventHandlers={new Map([
-                    ['loaded', function () { console.log('Report loaded'); } ],
-                    ['rendered', function () { console.log('Report rendered'); } ],
-                    ['error', function (event) { console.log(event.detail); } ],
+                    ['loaded', function () { console.log('Report loaded'); }],
+                    ['rendered', function () { console.log('Report rendered'); }],
+                    ['error', function (event) { console.log(event.detail); }],
                     ['visualClicked', () => console.log('visual clicked')],
                     ['pageChanged', (event) => console.log(event)],
                 ])}
@@ -37,11 +39,11 @@ const PerformancePage: React.FC = () => {
 
                 getEmbeddedComponent={(embeddedReport) => {
                     window.Report = embeddedReport;
-                } } />
-         
-    <Footer />
-    </div>
-  );
+                }} />
+
+            <Footer />
+        </div>
+    );
 };
 
 export default PerformancePage;

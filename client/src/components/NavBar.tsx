@@ -40,7 +40,7 @@ const NavBar = () => {
 
       <div className="column-1">
 
-        <div style={{ marginTop: '30px', marginBottom: '10px' }}>
+        <div style={{ marginTop: '30px', marginBottom: '30px'}}>
           <Link to="/" className="text-left w-full text-4xl p-8 font-semibold" style={{
             fontFamily: 'Arial, sans-serif', color: '#7724a7', paddingLeft: '68px'
           }}>
@@ -48,12 +48,12 @@ const NavBar = () => {
           </Link>
         </div>
 
-        <div className="links-row" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', gap: '16px', paddingLeft: '38px', marginTop: '-58px', flexWrap: 'nowrap' }}>
+        <div className="links-row" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', gap: '16px', paddingLeft: '38px', flexWrap: 'nowrap' }}>
           <Link to="/Performance" className="text-left text-xl font-semibold hover:text-brown-800" style={{
             fontFamily: 'Arial, sans-serif',
             color: '#FFFFFF',
             whiteSpace: 'nowrap',
-            padding: '38px',
+            padding: '0px 68px 38px 38px', // top right ? ? 
             fontSize: '1.3rem',
             maxWidth: '100%'
           }}>
@@ -64,7 +64,7 @@ const NavBar = () => {
             fontFamily: 'Arial, sans-serif',
             color: '#FFFFFF',
             whiteSpace: 'nowrap',
-            padding: '68px',
+            padding: '0px 68px 38px 38px', // top right ? ? 
             fontSize: '1.3rem',
             maxWidth: '100%'
           }}>
@@ -75,7 +75,7 @@ const NavBar = () => {
             fontFamily: 'Arial, sans-serif',
             color: '#FFFFFF',
             whiteSpace: 'nowrap',
-            padding: '68px',
+            padding: '0px 68px 38px 38px', // ? right ? ? 
             fontSize: '1.3rem',
             maxWidth: '100%'
           }}>
@@ -86,7 +86,7 @@ const NavBar = () => {
             fontFamily: 'Arial, sans-serif',
             color: '#FFFFFF',
             whiteSpace: 'nowrap',
-            padding: '68px',
+            padding: '0px 68px 38px 38px', // top right ? ? 
             fontSize: '1.3rem',
             maxWidth: '100%'
           }}>
@@ -97,7 +97,7 @@ const NavBar = () => {
             fontFamily: 'Arial, sans-serif',
             color: '#FFFFFF',
             whiteSpace: 'nowrap',
-            padding: '68px',
+            padding: '0px 68px 38px 38px', // top right ? ? 
             fontSize: '1.3rem',
             maxWidth: '100%'
           }}>

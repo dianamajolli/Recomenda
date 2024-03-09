@@ -6,10 +6,10 @@ import Footer from "./../components/Footer";
 import NavBar from "../components/NavBar";
 
 const RecruitmentPage: React.FC = () => {
-  return (
-    <div className="compensation-page-container">
-        <NavBar />
-      <PowerBIEmbed
+    return (
+        <div className="compensation-page-container">
+            <NavBar />
+            <PowerBIEmbed
                 embedConfig={{
                     type: 'report', // Supported types: report, dashboard, tile, visual, qna, paginated report and create
                     id: '167620a8-7a53-4c23-807b-1f44f3b297fd',
@@ -28,9 +28,9 @@ const RecruitmentPage: React.FC = () => {
                 }}
 
                 eventHandlers={new Map([
-                    ['loaded', function () { console.log('Report loaded'); } ],
-                    ['rendered', function () { console.log('Report rendered'); } ],
-                    ['error', function (event) { console.log(event.detail); } ],
+                    ['loaded', function () { console.log('Report loaded'); }],
+                    ['rendered', function () { console.log('Report rendered'); }],
+                    ['error', function (event) { console.log(event.detail); }],
                     ['visualClicked', () => console.log('visual clicked')],
                     ['pageChanged', (event) => console.log(event)],
                 ])}
@@ -39,11 +39,11 @@ const RecruitmentPage: React.FC = () => {
 
                 getEmbeddedComponent={(embeddedReport) => {
                     window.report = embeddedReport;
-                } } />
-         
-    <Footer />
-    </div>
-  );
+                }} />
+
+            <Footer />
+        </div>
+    );
 };
 
 export default RecruitmentPage;

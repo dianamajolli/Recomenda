@@ -7,7 +7,6 @@ import EmployeeDataList from './../components/EmployeeList/EmployeeList';
 import Modal, { useModal } from './../components/Modal/Modal';
 import SearchBar from './../components/SearchBar/SearchBar';
 import { GetValueContext } from './../contexts/Contexts';
-import { Link } from 'react-router-dom';
 import Footer from "./../components/Footer";
 import NavBar from "../components/NavBar";
 
@@ -35,7 +34,7 @@ const HomePage: React.FC = () => {
     return (
         <div className="App h-screen flex flex-col min-h-screen items-center">
             <NavBar />
-                <div className="">
+                <div className="" style={{ marginTop: '80px'}}>
                     <GetValueContext.Provider value={{ deleteId, updateId }}>
                         <Modal employeeList={employeeList} />
                     </GetValueContext.Provider>
@@ -50,7 +49,7 @@ const HomePage: React.FC = () => {
                         <EmployeeDataList employeeList={employeeList} setDeleteId={setDeleteId} setUpdateId={setUpdateId} />
                     </div>
                 </div>
-            <div style={{ marginTop: '80px'}}/>
+            <div style={{ marginTop: '40px'}}/>
             <Footer />
         </div>
     );
