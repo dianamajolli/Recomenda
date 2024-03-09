@@ -36,15 +36,16 @@ const NavBar = () => {
 
   return (
     <div className="w-full grid grid-cols-2 gap-4">
-
-
       <div className="column-1">
 
-        <div style={{ marginTop: '30px', marginBottom: '30px'}}>
-          <Link to="/" className="text-left w-full text-4xl p-8 font-semibold" style={{
-            fontFamily: 'Arial, sans-serif', color: '#7724a7', paddingLeft: '68px'
-          }}>
-            Recomenda
+        <div style={{ marginLeft: '30px' }}>
+
+          <Link to="/" className="text-left w-full p-4 font-semibold">
+            <img
+              className="logoRecomenda"
+              alt="logoRecomenda"
+              src="../../public/images/logoRecomenda4.png">
+            </img>
           </Link>
         </div>
 
@@ -53,7 +54,7 @@ const NavBar = () => {
             fontFamily: 'Arial, sans-serif',
             color: '#FFFFFF',
             whiteSpace: 'nowrap',
-            padding: '0px 68px 38px 38px', // top right ? ? 
+            padding: '0px 68px 38px 110px', // top right ? Left
             fontSize: '1.3rem',
             maxWidth: '100%'
           }}>

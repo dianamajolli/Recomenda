@@ -34,7 +34,7 @@ const HomePage: React.FC = () => {
     return (
         <div className="App h-screen flex flex-col min-h-screen items-center">
             <NavBar />
-                <div className="" style={{ marginTop: '80px'}}>
+                <div className="" style={{ marginTop: '60px'}}>
                     <GetValueContext.Provider value={{ deleteId, updateId }}>
                         <Modal employeeList={employeeList} />
                     </GetValueContext.Provider>
@@ -49,7 +49,7 @@ const HomePage: React.FC = () => {
                         <EmployeeDataList employeeList={employeeList} setDeleteId={setDeleteId} setUpdateId={setUpdateId} />
                     </div>
                 </div>
-            <div style={{ marginTop: '40px'}}/>
+            <div style={{ marginTop: '0px'}}/>
             <Footer />
         </div>
     );
