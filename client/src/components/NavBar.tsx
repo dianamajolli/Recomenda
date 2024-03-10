@@ -43,10 +43,8 @@ const NavBar = () => {
     <div className="w-full grid grid-cols-6 gap-4" style={{ marginBottom: '105px', marginTop: '20px' }}>
       <div className="column-1">
 
-        {/* <div style={{ marginLeft: '30px' }}> */}
         <div className="links-row" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', gap: '16px', paddingLeft: '38px', flexWrap: 'nowrap' }}>
 
-          {/* <Link to="/" className="text-left w-full p-4 font-semibold"> */}
           <Link to="/" style={{ minWidth: '100%' }}>
             <img
               className="logoRecomenda"
