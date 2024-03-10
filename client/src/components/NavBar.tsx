@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
-import { useSelector } from "react-redux";
+// import axios from "axios";
+// import { useSelector } from "react-redux";
+import { IoIosLogOut } from "react-icons/io";
+import { IconContext } from "react-icons";
 
 const NavBar = () => {
   //const user = useSelector((state) => state.auth.user);
@@ -34,12 +36,14 @@ const NavBar = () => {
   };
 
   return (
-    <div className="w-full grid grid-cols-2 gap-4">
+    <div className="w-full grid grid-cols-6 gap-4" style={{ marginBottom: '70px', marginTop: '20px' }}>
       <div className="column-1">
 
-        <div style={{ marginLeft: '30px' }}>
+        {/* <div style={{ marginLeft: '30px' }}> */}
+        <div className="links-row" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', gap: '16px', paddingLeft: '38px', flexWrap: 'nowrap' }}>
 
-          <Link to="/" className="text-left w-full p-4 font-semibold">
+          {/* <Link to="/" className="text-left w-full p-4 font-semibold"> */}
+          <Link to="/" style={{ minWidth: '100%' }}>
             <img
               className="logoRecomenda"
               alt="logoRecomenda"
@@ -47,71 +51,48 @@ const NavBar = () => {
             </img>
           </Link>
         </div>
+      </div>
+      <div className="column-2" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', flexWrap: 'nowrap', paddingLeft: '38px' }}>
 
-        <div className="links-row" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', gap: '16px', paddingLeft: '38px', flexWrap: 'nowrap' }}>
-          <Link to="/Performance" className="text-left text-xl font-semibold hover:text-brown-800" style={{
-            fontFamily: 'Arial, sans-serif',
-            color: '#FFFFFF',
-            whiteSpace: 'nowrap',
-            padding: '0px 68px 38px 110px', // top right ? Left
-            fontSize: '1.3rem',
-            maxWidth: '100%'
-          }}>
-            Performance Metrics
-          </Link>
-
-          <Link to="/RemoteWork" className="text-left text-xl font-semibold hover:text-brown-800" style={{
-            fontFamily: 'Arial, sans-serif',
-            color: '#FFFFFF',
-            whiteSpace: 'nowrap',
-            padding: '0px 68px 38px 38px', // top right ? ? 
-            fontSize: '1.3rem',
-            maxWidth: '100%'
-          }}>
-            Remote Work Analysis
-          </Link>
-
-          <Link to="/Training" className="text-left text-xl font-semibold hover:text-brown-800" style={{
-            fontFamily: 'Arial, sans-serif',
-            color: '#FFFFFF',
-            whiteSpace: 'nowrap',
-            padding: '0px 68px 38px 38px', // ? right ? ? 
-            fontSize: '1.3rem',
-            maxWidth: '100%'
-          }}>
-            Training and Development
-          </Link>
-
-          <Link to="/Compensation" className="text-left text-xl font-semibold hover:text-brown-800" style={{
-            fontFamily: 'Arial, sans-serif',
-            color: '#FFFFFF',
-            whiteSpace: 'nowrap',
-            padding: '0px 68px 38px 38px', // top right ? ? 
-            fontSize: '1.3rem',
-            maxWidth: '100%'
-          }}>
-            Compensation and Benefits
-          </Link>
-
-          <Link to="/Recruitment" className="text-left text-xl font-semibold hover:text-brown-800" style={{
-            fontFamily: 'Arial, sans-serif',
-            color: '#FFFFFF',
-            whiteSpace: 'nowrap',
-            padding: '0px 68px 38px 38px', // top right ? ? 
-            fontSize: '1.3rem',
-            maxWidth: '100%'
-          }}>
-            Recruitment
-          </Link>
-        </div>
-
-
-
-
+        <Link to="/Performance" className="text-left text-xl font-semibold hover:text-brown-800 index-link">
+          Performance Metrics
+        </Link>
       </div>
 
-    </div>
+      <div className="column-3" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', flexWrap: 'nowrap' }}>
 
+        <Link to="/RemoteWork" className="text-left text-xl font-semibold hover:text-brown-800 index-link">
+          Remote Work Analysis
+        </Link>
+      </div>
+
+      <div className="column-4" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', flexWrap: 'nowrap' }}>
+        <Link to="/Training" className="text-left text-xl font-semibold hover:text-brown-800 index-link">
+          Training and Development
+        </Link>
+      </div>
+
+      <div className="column-5" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', flexWrap: 'nowrap' }}>
+        <Link to="/Compensation" className="text-left text-xl font-semibold hover:text-brown-800 index-link">
+          Compensation and Benefits
+        </Link>
+      </div>
+
+      <div className="column-6" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', flexWrap: 'nowrap' }}>
+        <Link to="/Recruitment" className="text-left text-xl font-semibold hover:text-brown-800 index-link" >
+          Recruitment
+        </Link>
+
+        <div style={{ marginRight: '20px' }}>
+          <IconContext.Provider value={{ size: '2.2em', color: 'white', className: "global-class-name" }}>
+            <IoIosLogOut />
+          </IconContext.Provider>
+        </div>
+      </div>
+      {/* 
+      <div className="column-7" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'right', alignItems: 'center', flexWrap: 'nowrap' }}>
+      </div> */}
+    </div>
   );
 };
 
