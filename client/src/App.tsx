@@ -17,11 +17,11 @@ export default function App() {
                 <Routes>
                     <Route path="/" element={<ProtectedRoute><Homepage /></ProtectedRoute>} />
                     <Route path="/Login" element={<LoginPage />} />
-                    <Route path="/Performance" element={<PerformancePage />} />
-                    <Route path="/Training" element={<TrainingPage />} />
-                    <Route path="/Compensation" element={<CompensationPage />} />
-                    <Route path="/RemoteWork" element={<RemoteWorkPage />} />
-                    <Route path="/Recruitment" element={<RecruitmentPage />} />
+                    <Route path="/Performance" element={<ProtectedRoute><PerformancePage /></ProtectedRoute>} />
+                    <Route path="/Training" element={<ProtectedRoute><TrainingPage /></ProtectedRoute>} />
+                    <Route path="/Compensation" element={<ProtectedRoute><CompensationPage /></ProtectedRoute>} />
+                    <Route path="/RemoteWork" element={<ProtectedRoute><RemoteWorkPage /></ProtectedRoute>} />
+                    <Route path="/Recruitment" element={<ProtectedRoute><RecruitmentPage /></ProtectedRoute>} />
                 </Routes>
             </Router>
         </Provider>

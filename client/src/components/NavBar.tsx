@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 // import { useSelector } from "react-redux";
 import { IoIosLogOut } from "react-icons/io";
 import { IconContext } from "react-icons";
+import { userSignOut } from '../utilities/authUtils';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 const NavBar = () => {
   //const user = useSelector((state) => state.auth.user);
@@ -29,14 +32,15 @@ const NavBar = () => {
   //   fetchUserData();
   // }, [uid]);
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const handleSignOut = () => {
+    userSignOut(navigate, dispatch);
   };
 
   return (
-    <div className="w-full grid grid-cols-6 gap-4" style={{ marginBottom: '70px', marginTop: '20px' }}>
+    <div className="w-full grid grid-cols-6 gap-4" style={{ marginBottom: '105px', marginTop: '20px' }}>
       <div className="column-1">
 
         {/* <div style={{ marginLeft: '30px' }}> */}
@@ -83,15 +87,12 @@ const NavBar = () => {
           Recruitment
         </Link>
 
-        <div style={{ marginRight: '20px' }}>
+        <button onClick={handleSignOut}  style={{ marginRight: '20px' }}>
           <IconContext.Provider value={{ size: '2.2em', color: 'white', className: "global-class-name" }}>
             <IoIosLogOut />
           </IconContext.Provider>
-        </div>
+        </button>
       </div>
-      {/* 
-      <div className="column-7" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'right', alignItems: 'center', flexWrap: 'nowrap' }}>
-      </div> */}
     </div>
   );
 };
