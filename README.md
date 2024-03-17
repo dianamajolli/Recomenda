@@ -48,7 +48,7 @@ Key Features:
 - Recruitment 
     - Analyzing retention tax of employees and show the comparison of Canadian retention tax. 
 
-        ![Recriutment](./client/public/images/RecriutmentDashboard.png "Recruitment")
+        ![Recriutment](./client/public/images/RecruitmentDashboard.png "Recruitment")
 
 5. Dashboard:
     - Create a user-friendly dashboard for managers with customizable widgets to display relevant data and insights.
