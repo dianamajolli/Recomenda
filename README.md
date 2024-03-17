@@ -33,7 +33,7 @@ Key Features:
 
 - Compensation and Benefits
  - Data on promotion, bonuses, benefits, and other compensation metrics.
-    ![Compensation](./../../public/images/CompensationDashboard.png)
+    ![Compensation](./client/public/images/CompensationDashboard.png)
 
      
 - Recruitment 
