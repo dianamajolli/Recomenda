@@ -33,9 +33,9 @@ Key Features:
 
 - Compensation and Benefits
  - Data on promotion, bonuses, benefits, and other compensation metrics.
-    ![Compensation](./client/public/images/CompensationDashboard.png)
+    ![Compensation](./client/public/images/CompensationDashboard.png "Compensation")
 
-     
+         
 - Recruitment 
   - Analyzing retention tax of employees and show the comparison of Canadian retention tax. 
 
