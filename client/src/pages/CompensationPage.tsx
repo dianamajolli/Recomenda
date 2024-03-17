@@ -5,10 +5,12 @@ import './../index.css';
 import Footer from "./../components/Footer";
 import NavBar from "../components/NavBar";
 
+
 const CompensationPage: React.FC = () => {
     return (
         <div className="compensation-page-container">
             <NavBar />
+            
             <PowerBIEmbed
                 embedConfig={{
                     type: 'report', // Supported types: report, dashboard, tile, visual, qna, paginated report and create
@@ -40,7 +42,7 @@ const CompensationPage: React.FC = () => {
                 getEmbeddedComponent={(embeddedReport) => {
                     window.report = embeddedReport;
                 }} />
-
+            
             <Footer />
         </div>
     );
