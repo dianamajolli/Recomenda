@@ -58,11 +58,13 @@
   }
 
   .Embed-container {
-	height: 650px;
-	width: 1200px;
-	margin-left: 350px;
+	height: 63vh; /* Adjust the height to 75% of the viewport height */
+	width: 90%; /* Use the full width of the container */
 	margin-top: 10px;
-	align-items: center;
+	display: flex; /* Use flexbox for alignment */
+	justify-content: center; /* Center content horizontally */
+	align-items: center; /* Center content vertically */
+	margin-left: 10vh;
   }
   
   .index-link {
