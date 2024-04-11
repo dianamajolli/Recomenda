@@ -61,3 +61,5 @@ Technology Stack:
 - Database: MySQL
 - Dashboards: PowerBI 
 
+Diagram:
+![Diagram](./client/public/images/Diagram.png "Diagram")
